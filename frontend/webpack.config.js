@@ -2,6 +2,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+    output: {
+        publicPath: '/' // webpack can't resolve url when refresh nested page e.g. /1
+    },
     module: {
         rules: [
             {

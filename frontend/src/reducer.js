@@ -10,13 +10,13 @@ const rootReducer = (state = initialState, action) => {
     if (action.type === 'DELETE_TODO'){
         return {
             ...state,
-            todos: state.todos.filter(todo => todo.id !== action.id)
+            todos: state.todos.filter(todo => todo.id != action.id) // compare str and int. it's awful =)
         }
     }
     if (action.type === 'CREATE_TODO'){
         return {
             ...state,
-            todos: [...state.todos, {id: Math.random(), content: action.content}]
+            todos: [...state.todos, {id: Math.floor(Math.random() * 10000), content: action.content}]
         }
     }
     return state
