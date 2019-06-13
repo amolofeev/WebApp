@@ -1,11 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {connect} from "react-redux";
 
 
-class Button2 extends Component{
-    render(){
-        return <button onClick={()=>this.props.btnPressed()}>b2</button>
-    }
+const Button2 = ({_, btnPressed}) => {
+    return <button onClick={btnPressed}>button 2</button>
 }
 
 const events = (dispatch) => {

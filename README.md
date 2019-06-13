@@ -1,7 +1,3 @@
-**TodoList v2**
+**2 buttons + 2 Box**
 
-Simple ReactJS app for management Todos.
-
-It's quite clear example how ReactJS works.
-
-\+ Override sources to use `Redux` instead of `this.state` and passing `callbacks` as params to children
+Simple app for understanding of redux behaviour and possibilities.

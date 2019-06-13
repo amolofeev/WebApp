@@ -2,16 +2,13 @@ import React, {Component} from 'react'
 import {connect} from "react-redux";
 
 
-class Box2 extends Component{
-    render(){
-        console.log(this.props.name, 'render()', this.props.b2)
-        return (
-            <div className='box'>
-                <h3>{this.props.name}</h3>
-                <p>{this.props.b2}</p>
-            </div>
-        )
-    }
+const Box2 = ({b2}) => {
+    return (
+        <div className='box'>
+            <h3>Box 2</h3>
+            <p>{b2}</p>
+        </div>
+    )
 }
 
 const income = (state) => {

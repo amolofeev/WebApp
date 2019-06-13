@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
@@ -15,15 +15,13 @@ const store = createStore(rootReducer)
 const App = () => {
     return (
         <div className="container">
-            <p>Press F12</p>
-            <br />
             <div>
-                <Box1 name='box 1' />
+                <Box1 />
                 <Button1 />
             </div>
 
             <div>
-                <Box2 name='box 2'/>
+                <Box2 />
                 <Button2 />
             </div>
 
@@ -31,4 +29,4 @@ const App = () => {
     )
 }
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.querySelector('#root'))
