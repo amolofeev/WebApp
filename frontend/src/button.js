@@ -2,16 +2,16 @@ import React, {Component} from 'react'
 import {connect} from "react-redux";
 
 
-class Button extends Component{
+class Button1 extends Component{
     render(){
-        return <button onClick={()=>this.props.btnPressed(this.props.name)}>{this.props.name}</button>
+        return <button onClick={()=>this.props.btnPressed()}>b1</button>
     }
 }
 
 const events = (dispatch) => {
     return {
-        btnPressed: (name) => dispatch({type: 'btn', name:name})
+        btnPressed: () => dispatch({type: 'b1'})
     }
 }
 
-export default connect(null, events)(Button)
+export default connect(null, events)(Button1)

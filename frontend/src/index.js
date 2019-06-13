@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import rootReducer from "./reducer";
-import Button from './button'
-import Box from "./box";
+import Button1 from './button'
+import Button2 from './button2'
+import Box1 from "./box";
+import Box2 from "./box2";
 import './index.css'
 
 const store = createStore(rootReducer)
@@ -16,13 +18,13 @@ const App = () => {
             <p>Press F12</p>
             <br />
             <div>
-                <Box name='box 1' />
-                <Button name='btn 1'/>
+                <Box1 name='box 1' />
+                <Button1 />
             </div>
 
             <div>
-                <Box name='box 2'/>
-                <Button name='btn 2'/>
+                <Box2 name='box 2'/>
+                <Button2 />
             </div>
 
         </div>
